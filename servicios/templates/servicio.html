@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+	<h1>Informacion del Servicio</h1>
+
+  <tr>
+    <td>Sigla</td>
+    <td>{{servicio.sigla}}</td>
+  </tr>
+  <tr>
+    <td>Nombre</td>
+    <td>{{servicio.nombre}}</td>
+  </tr>
+  <tr>
+    <td>Cantidad de camas</td>
+    <td>{{servicio.cantcamas}}</td>
+  </tr>
+
+
+
+	<div class="container">
+		<div class="row mt-5 justify-content-center">
+	{% for cama in servicio %}
+		<div class="card" style="width: 18rem;">
+			<div class="card-body">
+			<h4 class="card-title">{{cama.nombre}}</h4>
+			<p class="card-text">{{cama.nombrePaciente}}</p>
+			<p class="card-text">{{cama.estado}}</p>
+			<a href="/cama/{{ cama.num }}/"class="card-link"> Detalle </a>
+			</div>
+
+		</div>
+	{% endfor %}
+
+	</div>
+</div>
+{% endblock %}

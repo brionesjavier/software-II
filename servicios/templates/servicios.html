@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Seleccionar Servicio</h1>
+
+{% for servicio in servicios %}
+	<li><a href="/servicio/{{ servicio.sigla }}">{{ servicio.nombre}} </a></li>
+
+{% endfor %}
+</ul>
+{% endblock %}

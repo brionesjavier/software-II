@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Informacion de la cama</h1>
+<table>
+  <tr>
+    <td>Nombre</td>
+    <td>{{cama.nombre}}</td>
+  </tr>
+  <tr>
+    <td>estado de camas</td>
+    <td>{{cama.estado}}</td>
+  </tr>
+  <tr>
+    <td>Nombre de paciente</td>
+    <td>{{cama.nombrePaciente}}</td>
+  </tr>
+
+</table>
+
+<body>
+ <select>
+	<option value="Disponible">Disponible</option>
+	<option value="En uso">En uso</option>
+	<option value="Posible Alta">Posible Alta</option>
+	<option value="Traslado">Traslado</option>
+	<option value="Alta confirmada">Alta confirmada</option>
+	<option value="En aseo">En aseo</option>
+ </select>
+<button type="button" onclick="Modificar)">Seleccionar</button>
+</body>
+{% endblock %}
